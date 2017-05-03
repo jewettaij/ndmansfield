@@ -1,13 +1,5 @@
 ndmansfield
 ===========
-## Typical usage
-
-    ndmansfield -box xsize ysize zsize -tsave tsave [options] > traj.raw
-
-## Example
-
-    ndmansfield -box 10 10 10 -tsave 2000 -tstop 20000 | tail -n 1001 > traj.raw
-
 ##  Description
 
 ![color varies over length from blue to red](./doc/images/hamiltonian_paths_16x16x16.gif)
@@ -26,6 +18,14 @@ The coordinates for the shapes of these curves are saved as 3-column
 (n-column) numeric text files (eg "traj.raw") containing xsize\*ysize\*zsize
 lines per curve, and blank lines as delimiters between new curves.
 Cyclic curves can also be generated.  (See details below.)
+
+## Typical usage
+
+    ndmansfield -box xsize ysize zsize -tsave tsave [options] > traj.raw
+
+## Example
+
+    ndmansfield -box 10 10 10 -tsave 2000 -tstop 20000 | tail -n 1001 > traj.raw
 
 The curves are assumed to be completely flexible,
 however stiffness and twist preferences can be introduced
