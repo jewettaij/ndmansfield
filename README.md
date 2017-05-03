@@ -97,7 +97,7 @@ Example in 2-D:
 
 Example in 4-D:
 
-    ndmansfield -box 10 10 10 10 -tsave 20000 -tstop 200000 | tail -n 626 > traj.raw
+    ndmansfield -box 10 10 10 10 -tsave 20000 -tstop 200000 | tail -n 10001 > traj.raw
 
 (If you use the -startcrd argument, you will have to change the number of
 columns in your file accordingly.)
