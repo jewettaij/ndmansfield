@@ -91,9 +91,11 @@ ndmansfield can generate random paths in dimensions
 other than 3 by changing the number of integers following the "-box" argument.
 
 Example in 2-D:
+
     ndmansfield -box 20 20 -tsave 1000 -tstop 15000 | tail -n 401 > traj.raw
 
 Example in 4-D:
+
     ndmansfield -box 10 10 10 10 -tsave 20000 -tstop 200000 | tail -n 626 > traj.raw
 
 (If you use the -startcrd argument, you will have to change the number of
