@@ -19,12 +19,11 @@ generates random self-avoiding space-filling curves
 in an arbitrary number of dimensions 
 using the algorithm developed by Marc L. Mansfield:
        (Mansfield, M.L., J. Chem Phys, 2006, 125(15):154103)
-Essentially, this program packs a random snake-like chain into a box.
-In order to do this, the program runs a Monte-Carlo simulation
+The program runs a Monte-Carlo simulation
 which generates a series of curves.  As the simulation progresses,
 the curves become increasingly random and independent of the starting shape.
 The coordinates for the shapes of these curves are saved as 3-column
-(n-column) numeric text files (eg "traj.raw") containing xsize\*ysize\*zsize
+(or n-column) numeric text files (eg "traj.raw") containing xsize\*ysize\*zsize
 lines per curve, and blank lines as delimiters between new curves.
 Cyclic curves can also be generated.  (See details below.)
 
