@@ -57,7 +57,7 @@ The total running time necessary to generate a random curve is
 estimated to be O(n^2).  (The number of iterations
 necessary to generate a random curve was estimated
 to grow as O(n) with the length of the curve.
-And the running time per iteration is O(n).)
+The running time per iteration is O(n).)
 The curves shown above have a length over 300000
 and were generated in a few minutes.
 
