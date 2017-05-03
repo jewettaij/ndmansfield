@@ -1,7 +1,7 @@
 ndmansfield
 ===========
 
-## Typical usage
+Usage:
 
     ndmansfield -box xsize ysize zsize -tsave tsave [options] > traj.raw
 
