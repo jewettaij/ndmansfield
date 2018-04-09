@@ -13,7 +13,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <sstream>     // defines stringstream
 #include <cstdlib>     // defines atod()
 #include <cstring>     // defines strcmp()
@@ -66,6 +65,7 @@ int main(int argc, char **argv)
   long *aSize = NULL;
   string starting_filename;
   bool record_cyclic = false;
+  long cyclic_periodic_direction = -1;
   double bend_energy_coeff = 0.0;
   double twist_energy_coeff = 0.0;
   
@@ -144,7 +144,9 @@ int main(int argc, char **argv)
         ndelete = 2;
       }
       else if (strcmp(argv[i], "-cyclic")==0) {
-        if ((i+1 >= argc) || (strlen(argv[i+1]) == 0))
+        if ((i+1 >= argc) ||
+            (strlen(argv[i+1]) == 0) ||
+            (argv[i+1][0] == '-'))
         {
           err_msg << "Error: Expected either \"yes\" or \"no\" following the \""
                   << argv[i] << "\" argument.\n";
@@ -152,6 +154,19 @@ int main(int argc, char **argv)
         }
         else
           record_cyclic = (strcmp(argv[i+1], "yes") == 0);
+        ndelete = 2;
+      }
+      else if (strcmp(argv[i], "-cyclic-direction")==0) {
+        if ((i+1 >= argc) || (strlen(argv[i+1]) == 0))
+        {
+          err_msg << "Error: Expected a nonnegative integer following the \""
+                  << argv[i] << "\" argument.\n";
+          throw InputErr(err_msg.str());
+        }
+        else {
+          record_cyclic = true;
+          cyclic_periodic_direction = stoi(argv[i+1]);
+        }
         ndelete = 2;
       }
       else if (strcmp(argv[i], "-box")==0)
@@ -264,6 +279,8 @@ int main(int argc, char **argv)
         " ####################################################################\n";
         
     cerr << " record_only_cyclic: " << (record_cyclic ? "true\n" : "false\n");
+    if (cyclic_periodic_direction >= 0)
+      cerr << " (cyclic_direction: " << cyclic_periodic_direction<<")"<< endl;
     if (tstop != DISABLE)
       cerr << " simulation tstop: "<< tstop <<" MC moves\n";
     cerr << "   (starting time: t=" << tstart << ")\n"
@@ -324,8 +341,16 @@ int main(int argc, char **argv)
         record_this = false;
       if ((t-t_prev) < tsave)
         record_this = false;
-      if ((record_cyclic) && (! ndmansfield.IsCyclic()))
-        record_this = false;
+      if (record_cyclic) {
+        if (cyclic_periodic_direction >= 0) {
+          if (! ndmansfield.IsCyclicPeriodic(cyclic_periodic_direction))
+            record_this = false;
+        }
+        else {
+          if (! ndmansfield.IsCyclic())
+            record_this = false;
+        }
+      }
       if ((t == tstart) && (starting_filename == ""))
         record_this = true;
       if (record_this) {

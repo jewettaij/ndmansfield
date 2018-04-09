@@ -162,9 +162,33 @@ bool NDmansfield::IsCyclic() {
     long delta = aCoordsEndA[d] - aCoordsEndB[d];
     distsq += delta*delta;
   }
-  return (distsq == 1);
   delete [] aCoordsEndA;
   delete [] aCoordsEndB;
+  return (distsq == 1);
+}
+
+
+bool NDmansfield::IsCyclicPeriodic(long direction) {
+  long *aCoordsEndA = new long [g_dim];
+  long *aCoordsEndB = new long [g_dim];
+  CoordsFromIseq(aCoordsEndA, 0);
+  CoordsFromIseq(aCoordsEndB, poly_length-1);
+  long distsq = 0;
+  bool return_val = true;
+  //cerr <<"----"<<endl;
+  for (int d=0; d < g_dim; d++) {
+    if (d == direction) {
+      if (abs(aCoordsEndA[d] - aCoordsEndB[d]) != (aSize[d]-2)-1)
+        return_val = false;
+    }
+    else {
+      if (aCoordsEndA[d] != aCoordsEndB[d])
+        return_val = false;
+    }
+  }
+  delete [] aCoordsEndA;
+  delete [] aCoordsEndB;
+  return return_val;
 }
 
 

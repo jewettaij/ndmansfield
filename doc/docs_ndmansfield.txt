@@ -78,10 +78,22 @@ Usage Syntax:
 
      -seed n                  Select the seed for the random number generator.
 
-     -cyclic yes/no           Is this a cyclic path?
-                              (Warning: cyclic paths are only possible in boxes
-                               which contain an even number of lattice sites)
+     -cyclic yes/no           Limit results to cyclic paths?
+                              (Warning: Cyclic paths which do not cross periodic
+                                        boundaries are only possible in boxes
+                                        which contain an even number of
+                                        lattice sites.)
 
+     -cyclic-direction d      Limit yourself to paths whose starting and ending
+                              points lie on opposite sides of the box along
+                              direction d.  For example, if d=0, then the path's
+                              starting and ending points must lie on opposite
+                              sides of the box along the x direction. IE they
+                              have the lowest and highest possible x coordinate,
+                              and the remaining coordinates must be identical.
+                              If d=1, then the two ends must lie in opposite 
+                              sides of the box along the y direction
+                              d=2 ... z direction, etc...
 
    Optional Arguments that effect physical properties of the chain:
 

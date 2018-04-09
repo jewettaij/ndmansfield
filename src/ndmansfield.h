@@ -234,6 +234,13 @@ public:
 
   bool IsCyclic(); //This function returns true of the end of the path is
                    //on a lattice site which is adjacent to the beginning.
+  bool IsCyclicPeriodic(long d); //This function returns true of the end of 
+                   //the path is on a lattice site which is on opposite sides
+                   //of the box in the d'th direction (d=0<->x, d=1<->y,...)
+                   //(The difference between the d'th coordinate for the
+                   // two ends of path must be the length of the box
+                   // in that direction, and the remaining coordinates
+                   // should be equal.)
 
 }; //struct NDmansfield
 

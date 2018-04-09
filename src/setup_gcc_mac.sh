@@ -8,7 +8,7 @@ export LFLAGS=""
 # Note: Static linking where avaiable is recommended. If you're using linux use:
 # export LFLAGS="-static"          
 
-export MY_FLAGS="-O3 -DNDEBUG -ffast-math -finline-functions -DSTRTOLD_UNSUPPORTED"
+export MY_FLAGS="-std=c++11 -O3 -DNDEBUG -ffast-math -finline-functions -DSTRTOLD_UNSUPPORTED"
 export CFLAGS="-c $MY_FLAGS"
 export CPP_PRELINKER_COMMAND="echo"
 export COMPILER_TEMP_FILES=""
