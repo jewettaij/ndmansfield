@@ -39,8 +39,8 @@ void ReadFile(string fname, NDmansfield& ndmansfield); // defined below
 
 
 string g_program_name("ndmansfield");
-string g_version_string("0.11");
-string g_date_string("2016-3-29");
+string g_version_string("0.12.0");
+string g_date_string("2018-4-08");
 
 
 
