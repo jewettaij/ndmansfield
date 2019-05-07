@@ -5,10 +5,9 @@ export ANSI_CPP="g++"
 export L_COMP="ar rs"
 
 export LFLAGS=""
-# Note: Static linking where avaiable is recommended. If you're using linux use:
-# export LFLAGS="-static"          
+#export LFLAGS="-static" <- using "-static" linker flag causes trouble with macs
 
-export MY_FLAGS="-std=c++11 -O3 -DNDEBUG -ffast-math -finline-functions -DSTRTOLD_UNSUPPORTED"
+export MY_FLAGS="-std=c++11 -g3 -O0"
 export CFLAGS="-c $MY_FLAGS"
 export CPP_PRELINKER_COMMAND="echo"
 export COMPILER_TEMP_FILES=""

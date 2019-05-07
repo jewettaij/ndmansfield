@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]
+
 ndmansfield
 ===========
 
@@ -53,6 +55,7 @@ This program was originally used to generate initial coordinates for polymer mel
 ![coarse grained DNA polymer model](./doc/images/moltemplate_usage/CG_dsDNA_gold_turquoise.gif)  ![coarse grained DNA polymer model](./doc/images/rightarrow.png)  ![DNA wrapped around a curve. Color varies from blue to red.](./doc/images/moltemplate_usage/wrap_CG_dsDNA_around_a_curve_from_ndmansfield_LLR.png)
 
 ## Running Time
+
 The total running time necessary to generate a random curve is
 estimated to be O(n^2).  (The number of iterations
 necessary to generate a random curve was estimated
@@ -63,13 +66,15 @@ and were generated in a few minutes.
 
 ## Compilation
 
-## Linux:
+## Linux and Apple macOS:
 
     cd src
-    source setup_gcc_linux.sh
+    source setup_gcc.sh
     make
 
-(If you are not using the bash shell, enter "bash" into the terminal beforehand)
+(If you are not using the bash shell, enter "bash" into the terminal beforehand.
+ *Note: Apple users* will need to install the gcc compiler
+ and other build tools using Xcode or brew.)
 
 ## Windows 10:
 
@@ -80,11 +85,6 @@ Install the Windows Subsystem for Linux (WSL) and run
 and then follow the instructions above for linux.
 (Older windows users can install Cygwin or MinGW.)
 
-## Apple:
-
-    cd src
-    source setup_gcc_OSX.sh
-    make
 
 ## Dimensionality:
 

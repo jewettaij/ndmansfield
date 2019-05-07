@@ -58,7 +58,7 @@ ndmansfield: $(OBJECT_FILES) $(LIB_FILES)
 	$(LIBS)
 
 
-GENERATED_FILES = *.o *.a *.pure core ndmansfield
+GENERATED_FILES = *.o *.a core ndmansfield
 
 install:
 	$(MAKE) ANSI_C="$(ANSI_C)" ANSI_CPP="$(ANSI_CPP)" L_COMP="$(L_COMP)" CFLAGS="$(CFLAGS)" LFLAGS="$(LFLAGS)" INSTALL_PATH="$(INSTALL_PATH)" ndmansfield
