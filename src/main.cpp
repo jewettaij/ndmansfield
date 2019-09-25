@@ -18,15 +18,16 @@
 #include <cstring>     // defines strcmp()
 using namespace std;
 
-#include "ndmansfield.h"   // Contains a description of the NDmansfield data structure
-                        // we will be using to store the state of our system.
+#include "ndmansfield.hpp" // Contains a description of the NDmansfield data 
+                           // structure we will be using to store the state
+                           // of our system as the simulation evolves.
 
 #include "random_gen.h" // Some random number generators.  This file defines
                         // the functions RANDOM_REAL_0_1() and INIT_RANDOM()
 
-#include "hamiltonian.h" // The object that will calculate the energy.
+#include "hamiltonian.hpp" // The object that will calculate the energy.
 
-#include "analysis.h"   // Diagnostics to report while running the simulation.
+#include "analysis.h"      // Diagnostics to report while running the simulation
 
 
 

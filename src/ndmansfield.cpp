@@ -8,10 +8,11 @@ using namespace std;
 
 #include "random_gen.h"
 
-#include "ndmansfield.h"   // Contains a description of the NDmansfield data structure
-                       // we will be using to store the state of our system.
+#include "ndmansfield.hpp" // Contains a description of the NDmansfield data 
+                           // structure we will be using to store the state
+                           // of our system as the simulation evolves.
 
-#include "hamiltonian.h" // The object that will calculate the energy.
+#include "hamiltonian.hpp" // The object that will calculate the energy.
 
 
 // NDmansfield::MonteCarloStep() 

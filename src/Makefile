@@ -63,7 +63,6 @@ GENERATED_FILES = *.o *.a core ndmansfield
 install:
 	$(MAKE) ANSI_C="$(ANSI_C)" ANSI_CPP="$(ANSI_CPP)" L_COMP="$(L_COMP)" CFLAGS="$(CFLAGS)" LFLAGS="$(LFLAGS)" INSTALL_PATH="$(INSTALL_PATH)" ndmansfield
 	cp -f ndmansfield $(INSTALL_PATH)
-	cp -f docs_ndmansfield.txt $(INSTALL_PATH)
 
 clean:
 	rm -f $(GENERATED_FILES)

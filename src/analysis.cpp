@@ -1,6 +1,6 @@
 #include <cmath>
 #include <cassert>
-#include "ndmansfield.h"
+#include "ndmansfield.hpp"
 #include "analysis.h"
 using namespace std;
 

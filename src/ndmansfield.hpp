@@ -16,7 +16,7 @@
                        // You can ask me what this does if you want.
                        // Strictly speaking you don't need to use assert()s
                        // in the code, but they are helpful for debugging.
-#include "err_report.h"
+#include "err.hpp"
 
 #include "globals.h"
 

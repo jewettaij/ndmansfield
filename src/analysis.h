@@ -1,7 +1,7 @@
 #ifndef _ANALYSIS_H
 #define _ANALYSIS_H
 
-#include "ndmansfield.h"
+#include "ndmansfield.hpp"
 
 
 void CountBondDirections(long *aBondCountPlusXYZ,

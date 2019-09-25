@@ -1,6 +1,6 @@
 #include <cassert>
-#include "ndmansfield.h"
-#include "hamiltonian.h"
+#include "ndmansfield.hpp"
+#include "hamiltonian.hpp"
 
 // Right now the hamiltonian does nothing (yet)
 

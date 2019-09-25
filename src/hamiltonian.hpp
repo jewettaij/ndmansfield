@@ -1,9 +1,10 @@
 #ifndef _HAMILTONIAN_H
 #define _HAMILTONIAN_H
 
-#include "ndmansfield.h"     //(defines NDmansfield)
 
-
+#include "ndmansfield.hpp" // Contains a description of the NDmansfield data 
+                           // structure we will be using to store the state
+                           // of our system as the simulation evolves.
 
 
 
