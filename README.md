@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]
 
 ndmansfield
 ===========
@@ -106,6 +106,5 @@ columns in your file accordingly.)
 
 ## License
 
-ndmansfield is available under the terms of the open-source 3-clause BSD 
-license.  (See `LICENSE.md`.)
+ndmansfield is available under the terms of the [MIT license](LICENSE.md).
 
