@@ -1,5 +1,4 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
-[![GitHub All Releases](https://img.shields.io/github/downloads/jewettaij/ndmansfield/total)]()
 [![GitHub repo size](https://img.shields.io/github/repo-size/jewettaij/ndmansfield)]()
 
 
