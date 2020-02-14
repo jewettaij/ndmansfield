@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
-[![GitHub repo size](https://img.shields.io/github/repo-size/jewettaij/ndmansfield)]()
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jewettaij/ndmansfield)]()
 
 
 
