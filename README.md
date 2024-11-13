@@ -6,6 +6,8 @@
 ndmansfield
 ===========
 
+![color varies over length from blue to red](./doc/images/hamiltonian_paths_16x16x16.gif)
+
 Usage:
 ```
 ndmansfield -box xsize ysize zsize -tsave tsave [options] > traj.raw
@@ -18,8 +20,6 @@ ndmansfield -box 10 10 10 -tsave 2000 -tstop 20000 | tail -n 1001 > traj.raw
 ```
 
 ##  Description
-
-![color varies over length from blue to red](./doc/images/hamiltonian_paths_16x16x16.gif)
 
 "ndmansfield" is a simple program which
 generates random self-avoiding space-filling curves
