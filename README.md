@@ -101,9 +101,12 @@ cd src
 source setup_gcc.sh
 make
 ```
-(If you are not using the bash shell, enter "bash" into the terminal beforehand.
- *Note: Apple users* will need to install the gcc compiler
- and other build tools using Xcode or brew.)
+If you are not using the bash shell, enter "bash" into the terminal beforehand.
+
+*Note: Apple users will need to install `gcc` and `make` using Xcode or brew.*
+*(If you encounter this error: `'iostream' file not found`, try installing
+ `gcc` using brew.)*
+
 
 ### Windows 10:
 
