@@ -115,9 +115,9 @@ Hamiltonian::CalcEnergyChange(NDmansfield &ndmansfield,
 					       aCoords_iseqBm1, 
 					       aCoords_iseqBm2));
       num_twists_after  += (1 - CosTorsionABCD(aCoords_iseqBp1, 
-					       aCoords_iseqB,
-					       aCoords_iseqA, 
-					       aCoords_iseqAp1));
+					       aCoords_iseqA,
+					       aCoords_iseqAp1, 
+					       aCoords_iseqAp2));
     }
 
     if (iseqB+2 < ndmansfield.poly_length) {
