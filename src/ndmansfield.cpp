@@ -243,7 +243,7 @@ istream& operator >> (istream& in, NDmansfield& ndmansfield)
                << "  Coordinates must be strictly positive integers.\n";
         throw InputErr(errmsg.str());
       }
-      else if (ndmansfield.aSize[2]-1 <= aCoords[d]) {
+      else if (ndmansfield.aSize[d]-1 <= aCoords[d]) {
         stringstream errmsg;
         errmsg << "Error near line "<<iseq+1<<":\n"
                << "  These coordinates lie outside the dimensions of the lattice\n"
